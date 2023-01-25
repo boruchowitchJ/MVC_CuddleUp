@@ -1,0 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+@font-face {
+  font-family: "milk";
+  src: url('../font/Milky\ Honey.ttf');
+}
+body {
+    font-family: "Lato", sans-serif;
+    background: #e2dedb;
+    color: #b3aca7;
+  }

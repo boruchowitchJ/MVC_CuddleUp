@@ -1,0 +1,25 @@
+.error{
+    margin-top: 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.error_image{
+position: relative;
+z-index: 999;
+background-image: url("../images/cuddle9.gif");
+background-size: contain;
+background-repeat: no-repeat;
+height: 29vh;
+width: 17%;
+}
+p{
+    width: 361px;
+    height: 41px;
+    transition: background-position-x 0.6s linear;
+    text-align: center;
+    font-family: "milk";
+    font-size: 100px;
+}

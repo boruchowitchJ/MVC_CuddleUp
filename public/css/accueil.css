@@ -1,0 +1,177 @@
+/* basics */
+@font-face {
+  font-family: "milk";
+  src: url('../font/Milky\ Honey.ttf');
+  
+}
+body {
+        font-family: "milk";
+        
+  }
+  
+  h1 {
+    margin: 0;
+    line-height: 1;
+    padding: 10px;
+    color: #978b84;
+  }
+  
+  p {
+    margin: 0;
+    padding: 10px;
+    color: #978b84;
+    font-size: 1.2em;
+  }
+  
+  a {
+    color: #e56633;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  /* the grid */
+  .grid-1 {
+    display: grid;
+    width: 100%;
+    max-width: 770px;
+    margin-left: 33%;
+    margin-top: -57px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 200px 200px auto 200px 200px 200px auto 200px 200px auto;
+    grid-gap: 25px;
+  }
+  
+  /* panels */
+  .panel {
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 0px 0px 5px #251b19;
+  }
+  
+  /* individual panels */
+  .panel-title {
+    box-shadow: none;
+  }
+  .panel-1 {
+    background-image: url("../images/cuddle1A.png");
+    background-size: 95%;
+    box-shadow: none;
+  }
+  .panel-2 {
+    background-image: url("../images/cuddle2.jpg");
+    background-size: cover;
+  }
+  .panel-3 {
+    box-shadow: none;
+  }
+  .panel-4 {
+    background-image: url("../images/cuddle5.jpg");
+  }
+  .panel-5 {
+    background-image: url("../images/cuddle4A2.png");
+    background-size: cover;
+  }
+  .panel-6 {
+    background-image: url("../images/cuddle3A.png");
+    background-size: cover;
+  }
+  .panel-7 {
+    box-shadow: none;
+   
+  }
+  .panel-8 {
+    background-image: url("../images/cuddleAT.png");
+    background-position-y: 5px; 
+  }
+  .panel-9 {
+    background-image: url("../images/cuddle2A.png");
+    background-size: contain;
+    box-shadow: none;
+  }
+  .panel-copyright {
+    box-shadow: none;
+    font-size: 0.75em;
+  }
+  
+  /* media query 1 */
+  @media only screen and (min-width: 400px) {
+    .grid-1 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 200px auto 200px 200px auto 200px auto;
+    }
+    .panel-title,
+    .panel-3,
+    .panel-6,
+    .panel-7,
+    .panel-copyright {
+      grid-column: span 2;
+    }
+    .panel-copyright {
+      text-align: right;
+    }
+    .panel-7 {
+      text-align: center;
+      
+    }
+    h1 {
+      font-size: 3em;
+    }
+  }
+  
+  /* media query 2 */
+  @media only screen and (min-width: 600px) {
+    .grid-1 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto 200px 200px 200px auto;
+    }
+    .panel-title,
+    .panel-copyright {
+      grid-column: span 3;
+    }
+    .panel-3,
+    .panel-6 {
+      grid-column: auto;
+    }
+    .panel-8 {
+      grid-column: span 2;
+    }
+    h1 {
+      font-size: 3.5em;
+    }
+    p {
+      font-size: 1.3em;
+    }
+  
+    /* flexbox centering */
+    .panel-3 {
+      display: flex;
+      align-items: center;
+    }
+  
+    /* layering */
+    .panel-7 {
+      grid-column: 1;
+      grid-row: 4;
+      z-index: 1;
+      margin: -5px 0 0 -10px;
+      transform: rotate(-2deg);
+    }
+  
+    .panel-7 p {
+      background: white;
+      box-shadow: 0 0px 0px 5px #251b19;
+      text-align: left;
+    }
+  
+    .panel-8 {
+      grid-column: 1 / span 2;
+      grid-row: 4;
+      background-size: 70%;
+      background-position: right,right;
+    }
+  }
+  
